@@ -1,3 +1,5 @@
+import math
+
 class Planet:
     """
     Represents a planet with its physical and orbital characteristics.
@@ -35,3 +37,26 @@ class Planet:
         radius = self.diameter/2
         return radius
 
+    def surface_area(self):
+        """
+        Calculates the surface area of the planet based on its radius.
+        :return: The surface area rounded to 2 decimal places.
+        """
+        surface_area = 4 * math.pi * (self.radius()) ** 2
+        return round(surface_area, 2)
+
+    def calculate_mass(self, weight):
+        """
+        A method to calculate your mass in newtons
+        :param weight:
+        :return:
+        """
+        pass
+
+    def calculat_weight(self, weight):
+        """
+        A method to calculate your weight on certain planets
+        :param weight:
+        :return:
+        """
+        pass
