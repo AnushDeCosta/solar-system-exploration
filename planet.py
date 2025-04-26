@@ -52,7 +52,7 @@ class Planet:
         :return: None – prints the mass in Newtons.
         """
         calculated_mass = weight * self.gravity
-        print(f"My mass is {calculated_mass} Newtons on {self.name}.")
+        return f"My mass is {calculated_mass} (Newtons) on {self.name}"
 
     def calculate_weight(self, weight):
         """
@@ -61,7 +61,7 @@ class Planet:
         :return: None – prints the weight on the planet in kilograms.
         """
         weight_on_planet = (weight * self.gravity) / 9.8
-        print(f"I weigh {round(weight_on_planet, 2)} kg on {self.name}.")
+        return f"I weigh {round(weight_on_planet, 2)} (kg) on {self.name}"
 
     def __str__(self):
         """
@@ -79,7 +79,7 @@ class Planet:
 
         output.append(f"---{self.name.upper()}---")
         output.append(f"{self.name} has a mass of {self.mass}.")
-        output.append(f"It is {self.distance_from_sun}\u2076 km from the sun.")
+        output.append(f"It is {self.distance_from_sun} 10\u2076 km from the sun.")
 
         # Moons
         if self.moon_count == 0:
