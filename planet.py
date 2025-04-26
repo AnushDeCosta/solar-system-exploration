@@ -63,3 +63,29 @@ class Planet:
         weight_on_planet = (weight * self.gravity) / 9.8
         print(f"I weigh {round(weight_on_planet, 2)} kg on {self.name}.")
 
+    def __str__(self):
+        """
+
+        :return:
+        """
+        output = []
+
+        output.append(f"---{self.name.upper()}---")
+        output.append(f"{self.name} has a mass of {self.mass}.")
+        output.append(f"It is {self.distance_from_sun}\u2076 km from the sun.")
+
+        # Moons
+        if self.moon_count == 0:
+            output.append(f"There are no moons orbiting {self.name}.")
+        elif self.moon_count == 1:
+            output.append(f"There is a single moon orbiting {self.name}.")
+        else:
+            output.append(f"There are {self.moon_count} moons orbiting {self.name}.")
+
+        # Ring System?
+        output.append(f"{self.name} has a ring system.") if self.ring_system else None
+
+        output.append(f"{self.name} has a global magnetic field.") if self.global_magnetic_field else None
+
+
+        return "\n".join(output)
