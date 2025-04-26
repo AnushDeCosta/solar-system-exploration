@@ -16,14 +16,16 @@ class SolarSystem:
         """
         Attempts to add a planet to the solar system.
         :param name: The name of the planet to add.
-        :return: None – prints success or rejection message.
+        :return: None – Adds to planet list if valid, prints rejection if not.
         """
-        pass
+
+        self.planets.append(name) if name in self.valid_planets else print(f"{name}. You are not a real planet.")
 
     def remove_planet(self, name):
         """
         Attempts to remove a planet from the solar system.
         :param name: The name of the planet to remove.
-        :return: None – prints success or error message.
+        :return: None – Removes planet from list or prints error message.
         """
-        pass
+
+        self.planets.remove(name) if name in self.planets else print(f"{name} is not in the solar system.")
