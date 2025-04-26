@@ -65,8 +65,15 @@ class Planet:
 
     def __str__(self):
         """
-
-        :return:
+        Provides a detailed, formatted description of the planet.
+        Lists all added planets, or indicates if no planets exist.
+        :return: A multi-line string including:
+        - The planet's name in uppercase
+        - Its mass
+        - Its distance from the Sun (with superscript 6 for millions of km)
+        - Information about the number of moons
+        - Whether it has a global magnetic field
+        - Whether it has a ring system (if applicable)
         """
         output = []
 
@@ -78,7 +85,7 @@ class Planet:
         if self.moon_count == 0:
             output.append(f"There are no moons orbiting {self.name}.")
         elif self.moon_count == 1:
-            output.append(f"There is a single moon orbiting {self.name}.")
+            output.append(f"There is a single moon which orbits {self.name}.")
         else:
             output.append(f"There are {self.moon_count} moons orbiting {self.name}.")
 
