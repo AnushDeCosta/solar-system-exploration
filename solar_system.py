@@ -29,3 +29,14 @@ class SolarSystem:
         """
 
         self.planets.remove(name) if name in self.planets else print(f"{name} is not in the solar system.")
+
+    def __str__(self):
+        """
+        Returns a string representation of the solar system.
+        Lists all added planets, or indicates if no planets exist.
+        :return: Formatted string of planet names.
+        """
+        output = ["(no planets yet)"] if not self.planets else [f"• {planet}" for planet in self.planets]
+        return "Planets in our Solar System:\n" + "\n".join(output)
+
+
