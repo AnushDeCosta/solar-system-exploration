@@ -34,7 +34,7 @@ class Planet:
         Calculates the radius of the planet based on its diameter.
         :return: The calculated radius of the planet.
         """
-        radius = self.diameter/2
+        radius = self.diameter / 2
         return radius
 
     def surface_area(self):
@@ -47,16 +47,19 @@ class Planet:
 
     def calculate_mass(self, weight):
         """
-        A method to calculate your mass in newtons
-        :param weight:
-        :return:
+        Calculates your mass in newtons based on your weight and the planet's gravity.
+        :param weight: Your weight on Earth (in kg)
+        :return: None – prints the mass in Newtons.
         """
-        pass
+        calculated_mass = weight * self.gravity
+        print(f"My mass is {calculated_mass} Newtons on {self.name}.")
 
-    def calculat_weight(self, weight):
+    def calculate_weight(self, weight):
         """
-        A method to calculate your weight on certain planets
-        :param weight:
-        :return:
+        Calculates your weight on a specific planet based on surface gravity.
+        :param weight: Your weight on Earth (in kg)
+        :return: None – prints the weight on the planet in kilograms.
         """
-        pass
+        weight_on_planet = (weight * self.gravity) / 9.8
+        print(f"I weigh {round(weight_on_planet, 2)} kg on {self.name}.")
+
