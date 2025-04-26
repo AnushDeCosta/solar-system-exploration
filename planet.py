@@ -27,3 +27,11 @@ class Planet:
         self.ring_system = ring_system
         self.global_magnetic_field = global_magnetic_field
 
+    def radius(self):
+        """
+        Calculates the radius of the planet based on its diameter.
+        :return: The calculated radius of the planet.
+        """
+        radius = self.diameter/2
+        return radius
+
