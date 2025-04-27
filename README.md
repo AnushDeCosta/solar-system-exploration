@@ -54,9 +54,26 @@ Example basic usage:
 from planet import Planet
 from solar_system import SolarSystem
 
+# Create a new Solar System
 my_solar_system = SolarSystem()
+
+# Create some Planet objects
 earth = Planet("Earth")
+mars = Planet("Mars")
+jupiter = Planet("Jupiter")
+pluto = Planet("Pluto")  # Note: Pluto is not a valid planet!
+
+# Add planets to the Solar System
 my_solar_system.add_planet(earth)
+my_solar_system.add_planet(mars)
+my_solar_system.add_planet(jupiter)
+my_solar_system.add_planet(pluto)  # This should trigger a validation warning
+
+# Remove a planet
+my_solar_system.remove_planet(mars)
+
+# Display the current Solar System
+print(my_solar_system)
 ```
 ## Future Enhancements
 - Add features like moons orbiting planets
